@@ -2,14 +2,17 @@ import React from 'react';
 import { Header } from './components/Header';
 import { StartLevel } from './components/StartLevel';
 import { CurrentLevel } from './components/CurrentLevel';
-import { Foods } from './components/Foods';
+import { BloodSugar } from './components/BloodSugar';
 import { FoodList } from './components/FoodList';
 import { AddFood } from './components/AddFood';
 import './App.css';
 import { StartInput } from './components/StartInput';
 
+import { GlobalProvider } from './context/GlobalState';
+
 function App() {
   return (
+    <GlobalProvider>
     <div>
       <center> 
       <div>
@@ -22,11 +25,12 @@ function App() {
         <CurrentLevel />
       </div>
       </center> 
-      <Foods />
+      <BloodSugar />
       <FoodList />
       <AddFood />
       <StartInput />
     </div>
+    </GlobalProvider>
   );
 }
 
