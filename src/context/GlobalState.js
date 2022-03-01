@@ -8,6 +8,9 @@ const initialState = {
     { id: 2, text: 'Banana', amount: 16 },
     { id: 3, text: 'Egg', amount: 1.5 },
     { id: 4, text: 'Bacon', amount: 1.4 }
+  ],
+  startlevel: [
+    { id: 1, initial: 0.00 }
   ]
 }
 
@@ -33,10 +36,19 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function setInput(level) {
+    dispatch({
+      type: 'SET_INPUT',
+      payload: level
+    });
+  }
+
   return (<GlobalContext.Provider value={{
     foods: state.foods,
+    startlevel: state.startlevel,
     deleteFood,
-    addFood
+    addFood,
+    setInput
   }}>
     {children}
   </GlobalContext.Provider>);

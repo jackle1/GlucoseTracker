@@ -6,7 +6,7 @@ export const Food = ({ food }) => {
 
   return (
     <li className="fooditem">
-      {food.text} <span>{food.amount}</span><button onClick={() => deleteFood(food.id)} className="delete-btn">x</button>
+      {food.text} <span>{food.amount}g</span><button onClick={() => deleteFood(food.id)} className="delete-btn">x</button>
     </li>
   )
 }

@@ -5,10 +5,11 @@ import { CurrentLevel } from './components/CurrentLevel';
 import { BloodSugar } from './components/BloodSugar';
 import { FoodList } from './components/FoodList';
 import { AddFood } from './components/AddFood';
-import './App.css';
 import { StartInput } from './components/StartInput';
 
 import { GlobalProvider } from './context/GlobalState';
+
+import './App.css';
 
 function App() {
   return (
